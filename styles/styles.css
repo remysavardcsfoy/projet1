@@ -1,0 +1,342 @@
+/* Resets / Bases */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.button {
+  color: white;
+  font-weight: bold;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 8px 20px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.button--large {
+  padding: 15px 50px;
+}
+
+.button svg {
+  margin-left: 5px;
+}
+
+svg {
+  fill: white;
+}
+
+
+/* typos */
+
+
+
+/* structure */
+
+
+/* Header */
+header {
+  padding: 0 24px;
+  background-color: #0067c7;
+  display: none;
+  
+}
+
+@media screen and (min-width: 800px) {
+  header {
+    display: block;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+  }
+}
+
+
+
+
+
+
+.login {
+  display: flex;
+  align-items: center;
+}
+
+.search-icon, .user-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.search-icon {
+  margin-right: 16px;
+}
+
+/* nav */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 30px 15px;
+  color: white;
+  display: inline-block;
+}
+
+nav li.active a, nav a:hover {
+  background-color: #0067c7;
+}
+
+
+
+.container {
+  max-width: 800px;
+  /* min-width: 400px; */
+  margin: 0 auto;
+  text-align: center;
+  padding: 70px 30px;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    padding: 45px 30px;
+  }
+}
+
+main {
+  
+}
+
+
+
+.magic {
+  padding-bottom: 120px;
+}
+
+.magic .container, .how .container, .values .container {
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+  .magic .container, .how .container, .values .container {
+    text-align: center;
+  }
+}
+
+
+.how img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .how.half-grid {
+    display: grid;
+  }
+
+  .how.half-grid .container {
+    order: 2;
+  }
+
+  .how.half-grid .bg-img {
+    order: 1;
+  }
+}
+
+.values .bg-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.values img {
+  object-fit: contain;
+  height: 60%;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .values img {
+    width: 60%;
+    padding: 45px 0;
+  }
+}
+
+.values-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.values-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid white;
+}
+
+.drawer {
+  display: none;
+}
+
+.trigger:hover + .drawer {
+  display: block;
+}
+
+/* footer {
+  
+} */
+
+.card {
+  text-align: left;
+  padding: 20px 15px;
+  background-color: lightgrey;
+  margin-bottom: 20px;
+}
+
+.card--blue {
+  background-color: #DFF0FF;
+}
+
+.whiteround {
+  clip-path: circle(45%);
+  background: white;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  max-width: 120px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 35px;
+}
+
+footer .logo svg {
+  fill: black;
+}
+
+/* utilities */
+.bg-blue {
+  background-color: #007ef3;
+  color: white;
+}
+
+.bg-dark-blue {
+  background-color: #0256a5;
+  color: white;
+}
+
+.bg-grey {
+  background-color: lightgrey;
+  color: white;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+@media screen and (min-width: 800px) {
+
+  .half-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .twothird-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 80px;
+  }
+  
+}
+
+
+.text-left {
+  text-align: left;
+}
+
+
+.half-flex  {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+
+/* components */
+.man {
+  background-image: url(../images/humain-travail.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 680px;
+}
+
+@media screen and (max-width: 800px) {
+  .magic {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .magic div:nth-child(1) {
+    order: 2;
+  }
+  
+  .magic div:nth-child(2) {
+    order: 1;
+  }
+
+  .man {
+    min-height: 400px;
+    background-size: 75%;
+  }
+}
